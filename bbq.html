@@ -9,30 +9,17 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
 </head>
 <body class ="bs">
-
-<!-- <div class="jumbotron text-center">
-  <h1>BB Quizzes</h1>
-  <p>Have a Battle with your Brain</p> 
-</div> -->
-  
 <div class="container">
-  <div class ="hm" id = "cmp">
-    <div class="row">
-      <div class="col-sm-12 text-center">
-        <h1 style="color: white; height: 100px; margin-top: 20px;">
-          <span>B</span>
-          <span>B</span>
-          <span>Q</span>
-          <span>u</span>
-          <span>i</span>
-          <span>z</span>
-          <span>z</span>
-          <span>e</span>
-          <span>s</span>
-        </h1>
-      </div>
+  <div class="row">
+    <div class="col-sm-12 text-center">
+      <h1 style="color: white; height: 100px; margin-top: 20px;">
+        <span>B</span>
+        <span>B</span>
+      </h1>
+      <h2 class="orange">Q&nbsp;u&nbsp;i&nbsp;z&nbsp;z&nbsp;e&nbsp;s</h2>
     </div>
-    <div class="row hdmg">
+  </div>
+  <div class ="row hdmg" id = "cmp">
       <div class="col-sm-4 chdiv" style="background-color: #353585 !important;">
         <img src="images/random.jpg" class = "catimg" alt="Random" width="105" height="105">
         <p><span>Random</span></p>
@@ -170,8 +157,8 @@
         <Button onclick="getQuestionByCategory(32)" class = "button">Start Quiz</Button>
       </div>
     </div>
-  </div>
   <div class =" row qqns" id = "qns">
+    <p>Hi welcome to our quiz</p>
   </div>
 </div >
 <script type="text/javascript">
@@ -202,7 +189,9 @@ function categoryajaxcall(url) {
 var xhr = new XMLHttpRequest();
 xhr.open("GET", url, true);
 xhr.setRequestHeader('Content-Type', "application/json");
-xhr.setRequestHeader('Access-Control-Allow-Origin', "*");
+xhr.setRequestHeader('Access-Control-Allow-Origin', "https://opentdb.com/");
+xhr.setRequestHeader('Access-Control-Allow-Methods', "POST, GET, PUT, OPTIONS, DELETE");
+xhr.setRequestHeader('Access-Control-Allow-Headers', 'Origin, Content-Type, Accept, Authorization, X-Request-With');
 // xhr.setRequestHeader('Access-Control-Allow-Origin', "https://opentdb.com");
 xhr.send();
 alert(1);
