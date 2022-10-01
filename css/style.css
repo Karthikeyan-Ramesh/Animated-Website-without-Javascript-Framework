@@ -3,6 +3,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Joy+Neon&display=swap');
 @import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
 
+.col-sm-4 {
+	margin-bottom: 20px;
+}
 .orange {
 	color: #fff; 
 	height: 100px; 
@@ -107,6 +110,8 @@ p {
 	display: inline-block;
 	margin: auto; /* need to change margin */
 	border-radius: 36px;
+	width: 100%;
+	height: 100%;
 }
 .chdiv{
     transition:transform .2s;
@@ -147,3 +152,8 @@ img {
   80%  { background: #33CC36; }
   100% { background: #33CCCC; }
 }
+@media only screen and (max-width: 767px) {
+	.orange {
+	 font-size: 4rem;
+	}
+  }
